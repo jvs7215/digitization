@@ -15,9 +15,21 @@ https://stackoverflow.com/questions/1875852/how-can-i-define-colors-as-variables
     --softYellow:#ffeecc;
     --softOrange:#ffb0a3;
     --softRed:#ff6973;
+     * 
+     * 
 }
  */
+ 
 
+/*color palettes
+https://coolors.co/u/jessica_salemme
+
+free icons
+https://icons.getbootstrap.com/
+
+free images
+https://unsplash.com/s/photos/digital
+*/
 
 /* color palette 2
  * D8E2DC soft mint
@@ -43,7 +55,7 @@ body {
     font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     line-height: 1.3;
     /*text color*/
-    color: #46425e;
+    color: #00b9be;
 
 }
 
@@ -137,16 +149,16 @@ textContainer {
 
 .orangeDiv {
     background-color: #ffb0a3;
-    width: 60%;
+    width: 80%;
     /*top right bot left*/
     padding: 1em 0em 1em 2em;
     
-    /*top right bot left*/
-    margin: 2em 0em 2em 2em;
     
-   border: double 7px white; /* border around the entire orange area */
-  border-radius: 1em;     /* optional: rounded corners */
-  
+  border: double 7px white;
+  border-radius: 1em;
+
+  /* center the div horizontally */
+  margin: 2em auto; /* top/bottom 2em, left/right auto centers it */
 }
 
 .orangeDiv p {
@@ -157,37 +169,4 @@ textContainer {
     padding: 0em 0.2em 0em 0.2em;
     border-radius: 0.3em;
     
-}
-
-
-/* double-border shadow-basic shadow-flexi border-outline*/ 
-.double-border { border: double 7px /* total added thickness of lines and gap between */ white }
-
-.shadow-basic {
-	--line-w: 2px /* line thickness */;
-	--line: var(--line-w) white;
-	margin: var(--line-w);
-	border: solid 3px /* gap space between border lines */ transparent;
-	padding: calc(.5em + var(--line-w));
-	box-shadow: 0 0 0 var(--line) /* outer border line */, 
-      	inset 0 0 0 var(--line) /* inner border line */
-}
-
-.shadow-flexi {
-	--line-w-inner: 2px /* inner line thickness */;
-	--line-w-outer: 4px /* outer line thickness */;
-	margin: var(--line-w-outer);
-	border: solid 3px /* gap space between border lines */ transparent;
-	padding: calc(.5em + var(--line-w-inner));
-	box-shadow: 0 0 0 var(--line-w-outer) white /* outer border line */, 
-      	inset 0 0 0 var(--line-w-inner) violet /* inner border line */
-}
-
-.border-outline {
-	--line-w-outer: 4px;
-	--space: 3px;
-	margin: calc(var(--line-w-outer) + var(--space));
-	outline: dotted var(--line-w-outer) white /* outer border line */;
-	outline-offset: var(--space) /* gap space between border lines */;
-	border: dashed 2px violet /* inner border line */
 }
