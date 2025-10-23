@@ -1,0 +1,114 @@
+/*color palette 1
+ * 46425e dark purple
+ * 15788c dark blue
+ * 00b9be lighter blue
+ * ffeecc pale yellow
+ * ffb0a3 soft orange
+ * ff6973 soft red
+ * 
+ * https://stackoverflow.com/questions/1875852/how-can-i-define-colors-as-variables-in-css
+
+:root {
+    --purple:#46425e;
+    --darkBlue:#15788c;
+    --lightBlue:#00b9be;
+    var-softYellow:#ffeecc;
+    --softYellow:#ffeecc;
+    --softOrange:#ffb0a3;
+    --softRed:#ff6973;
+}
+ * */
+ 
+ 
+/* color palette 2
+ * D8E2DC soft mint
+ * FFE5D9 soft tan
+ * FFCAD4 light pink
+ * F4ACB7 sorbet
+ * 9D8189 brown 
+*/
+ 
+/*clean canvas*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*setting defaults*/
+body {
+    background-color: #ffeecc;
+    font-size: 1.6em;
+    /*font stack*/
+    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    line-height: 1.3;
+    /*text color*/
+    color: #46425e;
+    
+}
+
+
+/*full size images*/
+img { max-width:100%; }
+
+
+/*indent lists*/
+ol, ul { padding-left: 2em }
+
+
+
+button { border:none; }
+
+a {
+    text-decoration: underline;
+    color: #15788c;
+}
+a:hover { color: #00b9be}
+/*a:active { color: #ffeecc }
+a:visited { color: #15788c }*/
+
+
+/*title div*/
+.fullWidthDiv {
+  width: 100%;
+  background-color: #ff6973;
+  border: none;
+  padding: 0em;
+  height: 7em;
+}
+
+/*title styling*/
+.title {
+    text-align:center;
+    padding-top: 1.8em;
+    font-size: 2.1em;
+    color: #46425e;
+}
+
+title-a {
+    font-size: .75em;
+}
+
+
+h2{
+    /*top right bot left*/
+    padding: 1em 0 .25em 1em; 
+    color: #15788c;
+}
+
+img.icon{
+  width: 2.5em;
+  height: 2.5em;
+  /*top right bot left*/
+  margin: 0.25em 1.2em 0em 1.2em;
+}
+
+p {
+    color: #ff6973;
+    /*top right bot left*/
+    padding: 0em 3.2em 0em 3.2em; 
+}
+
+.mainImage {
+}
