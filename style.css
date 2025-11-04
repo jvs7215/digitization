@@ -95,13 +95,13 @@ a:visited { color: #15788c }*/
     background-color: #ff6973;
     border: none;
     padding: 0em;
-    height: 7em;
+    height: 6em;
 }
 
 /*title styling*/
 .title {
     text-align: center;
-    padding-top: 1.8em;
+    padding-top: 0.8em;
     font-size: 2.1em;
     color: #46425e;
 }
@@ -115,6 +115,13 @@ h2 {
     /*top right bot left*/
     padding: 0.5em 0 .4em 0em;
     color: #46425e;
+}
+
+h3 {
+    font-weight: bold;
+    color: #46425e;
+        /*top right bot left*/
+    padding: 0.3em 0 .3em 0em;
 }
 
 img.icon {
@@ -138,6 +145,7 @@ p {
     /*top right bot left*/
     padding: 0em 3.2em 0em 3.2em;
 }
+
 
 .mainImage {
     /*https://stackoverflow.com/questions/5758642/how-to-put-text-over-images-in-html*/
