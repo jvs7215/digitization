@@ -1,42 +1,27 @@
-/*color palette 1
- * 46425e dark purple
- * 15788c dark blue
- * 00b9be lighter blue
- * ffeecc pale yellow
- * ffb0a3 soft orange
- * ff6973 soft red
- * 
-https://stackoverflow.com/questions/1875852/how-can-i-define-colors-as-variables-in-css
-*/
-/*:root {
-    --purple:#46425e;
-    --darkBlue:#15788c;
-    --lightBlue:#00b9be;
-    --softYellow:#ffeecc;
-    --softOrange:#ffb0a3;
-    --softRed:#ff6973;
-     * 
-     * 
-}
- */
- 
-
-/*color palettes
-https://coolors.co/u/jessica_salemme
-
+/*
 free icons
 https://icons.getbootstrap.com/
 
 free images
 https://unsplash.com/s/photos/digital
+
+neo brutalism style guide
+https://medium.com/@sepidy/how-can-i-design-in-the-neo-brutalism-style-d85c458042de
+
+style references
+https://dribbble.com/tags/neo-brutalism
 */
 
-/* color palette 2
- * D8E2DC soft mint
- * FFE5D9 soft tan
- * FFCAD4 light pink
- * F4ACB7 sorbet
- * 9D8189 brown 
+/*
+COLOR PALETTE - NEO BRUTALISM STYLE
+BLUE    #87CEEB
+GREEN   #90EE90
+YELLOW  #F4D738
+ORANGE  #FF7A5C
+PINK    #FFB2EF
+PURPLE  #A388EE
+WHITE
+BLACK
 */
 
 /*clean canvas, * affects whole file*/
@@ -49,15 +34,52 @@ https://unsplash.com/s/photos/digital
 
 /*setting defaults*/
 body {
-    background-color: #46425e;
+    background-color: black;
     font-size: 1.6em;
+
+    display: flex;
+
+
     /*font stack*/
-    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family: 'Public Sans', Arial, sans-serif;
     line-height: 1.3;
-    /*text color*/
-    color: #00b9be;
+
 
 }
+
+.pageWrapper {
+    background: linear-gradient(to top right, #FFB2EF, #FF7A5C, #F4D738, #A388EE);
+    border-radius: 1em;
+    overflow: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    /* black edges on sides only */
+    margin-left: 0.2em;
+    margin-right: 0.2em;
+    border-left: 0.5em solid black;
+    border-right: 0.5em solid black;
+
+    /* black edges on sides only */
+    margin-top: 0.1em;
+    margin-bottom: 0.1em;
+    border-top: 0.1em solid black;
+    border-bottom: 0.1em solid black;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 5em; /* pushes everything down from top edge */
+
+
+    /*text color*/
+    color: black;
+}
+
 
 
 /*full size images*/
@@ -78,72 +100,96 @@ button {
     border: none;
 }
 
-a {
-    text-decoration: underline;
-    color: #15788c;
-}
-a:hover {
-    color: #00b9be
-}
-/*a:active { color: #ffeecc }
-a:visited { color: #15788c }*/
 
 
-/*title div*/
+
+/*nav bar div*/
 .fullWidthDiv {
-    width: 100%;
-    background-color: #ff6973;
-    border: none;
-    padding: 0em;
-    height: 6em;
+    /*    width: 100%;*/
+    background-color: white;
+    /*    padding: 0em;*/
+    height: 3em;
+    border-bottom: 0.2em solid black;
+
+    display: flex;
+
 }
 
-/*title styling*/
+
+
+.topPage {
+
+    margin-left: 3em;
+    color: black;
+    margin-bottom: 6.5em;
+
+}
+
+
 .title {
     text-align: center;
-    padding-top: 0.8em;
-    font-size: 2.1em;
-    color: #46425e;
+    padding-top: 0.0em;
+    font-size: 2em;
+    color: black;
 }
 
-title-a {
-    font-size: .75em;
+
+/*NEEDS WORK*/
+.subtitle {
+    font-size: 0.6em;
+    text-align: left;
+    color: black;
+    margin-top: 0.3em;
 }
 
+
+h1 {
+    color: black;
+}
 
 h2 {
     /*top right bot left*/
     padding: 0.5em 0 .4em 0em;
-    color: #46425e;
+    color: black;
+
 }
 
 h3 {
     font-weight: bold;
-    color: #46425e;
-        /*top right bot left*/
-    padding: 0.3em 0 .3em 0em;
+    color: black;
+    /*top right bot left*/
+    padding: 0.8em 0 .3em 0em;
+
 }
 
 img.icon {
-    width: 2.5em;
-    height: 2.5em;
+    width: 2em;
+    height: 2em;
     /*top right bot left*/
-    margin: 0.25em 1.2em 0em 1.2em;
+    margin: 0.5em 0.5em 0em 1em;
 }
 
 
-img.subIcon {
-  width: 1.2em;             /* scales with text */
-  height: 1.2em;
-  vertical-align: middle;   /* aligns with text */
-  margin-right: 0.4em;      /* space between icon and text */
+img.rightIcon {
+    width: 1.2em; /* scales with text */
+    height: 1.2em;
+    vertical-align: middle; /* aligns with text */
+    margin-left: 0.4em; /* space between icon and text */
+}
+
+img.leftIcon {
+    width: 1.2em; /* scales with text */
+    height: 1.2em;
+    vertical-align: middle; /* aligns with text */
+    margin-right: 0.4em; /* space between icon and text */
 }
 
 
 p {
-    color: #ff6973;
+    color: black;
     /*top right bot left*/
     padding: 0em 3.2em 0em 3.2em;
+    font-family: 'Roboto Mono', monospace;
 }
 
 
@@ -151,30 +197,53 @@ p {
     /*https://stackoverflow.com/questions/5758642/how-to-put-text-over-images-in-html*/
 }
 
-textContainer {
-    background-color: #ffb0a3;
-}
 
-.orangeDiv {
-    background-color: #ffb0a3;
+.sectionDivBlue {
+    background-color: #87CEEB;
     width: 80%;
     /*top right bot left*/
     padding: 1em 0em 1em 2em;
-    
-    
-  border: double 7px white;
-  border-radius: 1em;
 
-  /* center the div horizontally */
-  margin: 2em auto; /* top/bottom 2em, left/right auto centers it */
+
+
+    border: double 7px white;
+    border-radius: 0.5em;
+
+    /* center the div horizontally */
+    margin: 2em auto; /* top/bottom 2em, left/right auto centers it */
+
+    /* box shadow */
+    /*   box-shadow: none|h-offset v-offset blur spread color |inset|initial|inherit;*/
+    /*spread to make it larger*/
+    box-shadow: 0.6em 0.8em black;
 }
 
-.orangeDiv p {
-    color: #46425e;
-    background-color: #ffeecc;
-    display: inline; 
+.sectionDivBlue p {
+    color: black;
+
+    /*highlight effect*/
+    /*    background-color: #ffeecc;
+    display: inline; */
     /*top right bot left*/
+
     padding: 0em 0.2em 0em 0.2em;
     border-radius: 0.3em;
-    
+
+}
+
+/*make links like buttons*/
+.sectionDivBlue a {
+    color: black;
+    display: inline-block;          /* makes it behave like a button */
+    background-color: white;      /* filled color*/
+    padding: 0.25em 0.5em;             /* space inside the button */
+    border-radius: 0.3em;           /* rounded corners, same as site divs */
+    box-shadow: 0.25em 0.3em 0px black;  /* pure black shadow */
+    font-weight: bold;               /* bold text */
+    transition: transform 0.1s;     /* slight hover effect */
+    text-decoration: none;
+}
+.sectionDivBlue a:hover {
+    transform: translateY(-2px); /* lifts the button slightly on hover */
+    box-shadow: 10px 10px 0px black; /* stronger shadow on hover */
 }
