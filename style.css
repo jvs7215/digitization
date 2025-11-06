@@ -36,72 +36,53 @@ BLACK
 body {
     background-color: black;
     font-size: 1.6em;
-
+    /*    cursor: url('images/plug-fill.svg'), auto;
+*/
     display: flex;
-
 
     /*font stack*/
     font-family: 'Public Sans', Arial, sans-serif;
     line-height: 1.3;
 
 
+    justify-content: flex-start; /* align everything to the left */
+    align-items: flex-start; /* align everything to the top */
 }
 
+/*gradient background with curved edges*/
 .pageWrapper {
     background: linear-gradient(to top right, #FFB2EF, #FF7A5C, #F4D738, #A388EE);
-    border-radius: 1em;
+    border-radius: 1.5em;
     overflow: hidden;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 
-    /* black edges on sides only */
-    margin-left: 0.2em;
-    margin-right: 0.2em;
-    border-left: 0.5em solid black;
-    border-right: 0.5em solid black;
+    /* black edges on sides */
+    margin-left: 1em;
+    margin-right: 1em;
+    border-left: 0.2em solid black;
+    border-right: 0.2em solid black;
 
-    /* black edges on sides only */
+    /* black edges on top/bot */
     margin-top: 0.1em;
     margin-bottom: 0.1em;
-    border-top: 0.1em solid black;
-    border-bottom: 0.1em solid black;
+    border-top: 0.2em solid black;
+    border-bottom: 0.2em solid black;
 }
 
-
+/*container for top of page*/
 .container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding-top: 5em; /* pushes everything down from top edge */
-
 
     /*text color*/
     color: black;
+
+    padding-top: 5em; /* pushes everything down from top edge */
+    padding-bottom: 3em; /* extra space at the bottom */
 }
-
-
-
-/*full size images*/
-img {
-    max-width: 100%;
-}
-
-
-/*indent lists*/
-ol,
-ul {
-    padding-left: 2em
-}
-
-
-
-button {
-    border: none;
-}
-
-
-
 
 /*nav bar div*/
 .fullWidthDiv {
@@ -109,50 +90,69 @@ button {
     background-color: white;
     /*    padding: 0em;*/
     height: 3em;
-    border-bottom: 0.2em solid black;
+    border-bottom: 0.3em solid black;
 
     display: flex;
-
 }
 
 
-
 .topPage {
-
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* left alignment */
+    position: relative;
     margin-left: 3em;
     color: black;
-    margin-bottom: 6.5em;
-
+    margin-bottom: 2em;
 }
 
 
 .title {
-    text-align: center;
     padding-top: 0.0em;
     font-size: 2em;
     color: black;
 }
 
 
-/*NEEDS WORK*/
 .subtitle {
-    font-size: 0.6em;
-    text-align: left;
+    font-size: 0.4em;
     color: black;
     margin-top: 0.3em;
+    padding-left: 0; /* remove extra padding */
+    align-self: flex-start; /* lock left alignment */
+
+    max-width: 700px; /*cuts text off on the right*/
+    text-align: justify; /* makes text end at same point (stretches out spaces tho) */
+    hyphens: auto; /* breaks long words with a dash */
+    padding-right: 2em; /* small padding to visually “cut off” evenly */
 }
 
 
-h1 {
-    color: black;
+.title h1 {
+    display: flex;
+    align-items: center; /* keep icon aligned with text */
+    gap: 0em; /* gap beteeen icon*/
+
 }
 
 h2 {
-    /*top right bot left*/
+
+    /*ORIGINAL*/
     padding: 0.5em 0 .4em 0em;
     color: black;
 
+
+    /*    /\*white "button" effect - better without??*\/
+    padding: 0.1em 0.3em; /\* space inside the button *\/
+    display: inline-block; /\* makes it behave like a button *\/
+    background-color: white; /\* filled color*\/
+    border-radius: 0.3em; /\* rounded corners, same as site divs *\/
+    box-shadow: 0.25em 0.3em 0px black; /\* black shadow *\/
+    margin-bottom: 0.5em;*/
+
 }
+
+testtesttests
 
 h3 {
     font-weight: bold;
@@ -192,30 +192,58 @@ p {
     font-family: 'Roboto Mono', monospace;
 }
 
+.essayP {
+    /* top/right/bottom/left */
+    margin: 1.3em 0 1.3em 2.5em; /* spacing between paragraphs */
+    text-align: justify; /* evens out right edge */
+    text-indent: 2em; /* indent first line */
+    max-width: 42em; /* limits width */
 
-.mainImage {
-    /*https://stackoverflow.com/questions/5758642/how-to-put-text-over-images-in-html*/
+}
+
+/*full size images*/
+img {
+    max-width: 100%;
 }
 
 
+/*indent lists*/
+ol,
+ul {
+    padding-left: 2em
+}
+
+/*put divs side by side*/
+.horDivContainer {
+    display: flex; /* puts children side by side */
+    justify-content: center; /* center horizontally */
+    gap: 2em; /* space between the divs */
+    flex-wrap: wrap; /* wrap to new line on small screens */
+}
+
 .sectionDivBlue {
     background-color: #87CEEB;
-    width: 80%;
+    width: 60%;
     /*top right bot left*/
     padding: 1em 0em 1em 2em;
-
-
-
-    border: double 7px white;
+    /*    border: double 7px white;*/
     border-radius: 0.5em;
 
     /* center the div horizontally */
-    margin: 2em auto; /* top/bottom 2em, left/right auto centers it */
+    margin: 1em auto; /* top/bottom 1em, left/right auto centers it */
 
     /* box shadow */
     /*   box-shadow: none|h-offset v-offset blur spread color |inset|initial|inherit;*/
-    /*spread to make it larger*/
     box-shadow: 0.6em 0.8em black;
+
+    transition: transform 0.2s, box-shadow 0.2s; /* smooth animation */
+}
+
+.sectionDivBlue:hover {
+    transform: translateY(-3px); /* lifts the button slightly up*/
+    transform: translateY(-2px); /* lifts the button slightly left*/
+    box-shadow: 0.8em 1em black; /* stronger shadow */
+
 }
 
 .sectionDivBlue p {
@@ -231,19 +259,182 @@ p {
 
 }
 
-/*make links like buttons*/
-.sectionDivBlue a {
-    color: black;
-    display: inline-block;          /* makes it behave like a button */
-    background-color: white;      /* filled color*/
-    padding: 0.25em 0.5em;             /* space inside the button */
-    border-radius: 0.3em;           /* rounded corners, same as site divs */
-    box-shadow: 0.25em 0.3em 0px black;  /* pure black shadow */
-    font-weight: bold;               /* bold text */
-    transition: transform 0.1s;     /* slight hover effect */
-    text-decoration: none;
+
+.sectionDivPurple {
+    background-color: #A388EE;
+    width: 90%;
+    /*top right bot left*/
+    padding: 1em 0em 1em 2em;
+    /*    border: double 7px white;*/
+    border-radius: 0.5em;
+
+    /* center the div horizontally */
+    margin: 1em auto; /* top/bottom 1em, left/right auto centers it */
+
+    /* box shadow */
+    /*   box-shadow: none|h-offset v-offset blur spread color |inset|initial|inherit;*/
+    box-shadow: 0.6em 0.8em black;
+
+    transition: transform 0.2s, box-shadow 0.2s; /* smooth animation */
 }
-.sectionDivBlue a:hover {
-    transform: translateY(-2px); /* lifts the button slightly on hover */
-    box-shadow: 10px 10px 0px black; /* stronger shadow on hover */
+
+.sectionDivPurple:hover {
+    transform: translateY(-3px); /* lifts the button slightly up*/
+    transform: translateY(-2px); /* lifts the button slightly left*/
+    box-shadow: 0.8em 1em black; /* stronger shadow */
+
+}
+
+.sectionDivPurple p {
+    color: black;
+
+    /*highlight effect*/
+    /*    background-color: #ffeecc;
+    display: inline; */
+    /*top right bot left*/
+
+    padding: 0em 0.2em 0em 0.2em;
+    border-radius: 0.3em;
+
+}
+
+
+/*make links like buttons*/
+.sectionDivPurple a {
+    color: black;
+    display: inline-block; /* makes it behave like a button */
+    background-color: white; /* filled color*/
+    padding: 0.25em 0.5em; /* space inside the button */
+    border-radius: 0.3em; /* rounded corners, same as site divs */
+    box-shadow: 0.25em 0.3em 0px black; /* black shadow */
+    transition: transform 0.1s, box-shadow 0.1s;
+    text-decoration: none;
+    margin-top: 0.6em;
+    margin-bottom: 0.3em;
+}
+
+.sectionDivPurple a:hover {
+    /*scale and move up*/
+    transform: scale(1.004) translateY(-0.25em);
+    box-shadow: 0.35em 0.4em 0px black; /* stronger shadow */
+}
+
+
+
+.sectionDivYellow {
+    background-color: #F4D738;
+    width: 90%;
+    /*top right bot left*/
+    padding: 1em 0em 1em 2em;
+    /*    border: double 7px white;*/
+    border-radius: 0.5em;
+
+    /* center the div horizontally */
+    margin: 1em auto; /* top/bottom 1em, left/right auto centers it */
+
+    /* box shadow */
+    /*   box-shadow: none|h-offset v-offset blur spread color |inset|initial|inherit;*/
+    box-shadow: 0.6em 0.8em black;
+
+    transition: transform 0.2s, box-shadow 0.2s; /* smooth animation */
+}
+
+.sectionDivYellow:hover {
+    transform: translateY(-3px); /* lifts the button slightly up*/
+    transform: translateY(-2px); /* lifts the button slightly left*/
+    box-shadow: 0.8em 1em black; /* stronger shadow */
+
+}
+
+.sectionDivYellow p {
+    color: black;
+
+    /*highlight effect*/
+    /*    background-color: #ffeecc;
+    display: inline; */
+    /*top right bot left*/
+
+    padding: 0em 0.2em 0em 0.2em;
+    border-radius: 0.3em;
+
+}
+
+
+.sectionDivGreenHalf {
+    background-color: #90EE90;
+    width: 45%;
+    /*top right bot left*/
+    padding: 1em 0em 1em 2em;
+
+    /*    border: double 7px white;*/
+    border-radius: 0.5em;
+
+    margin: 1em 0; /* only vertical margin */
+
+    /* box shadow */
+    /*   box-shadow: none|h-offset v-offset blur spread color |inset|initial|inherit;*/
+    /*spread to make it larger*/
+    box-shadow: 0.6em 0.8em black;
+    transition: transform 0.2s, box-shadow 0.2s; /* smooth animation */
+}
+
+.sectionDivGreenHalf:hover {
+
+    /*scale and move up*/
+    transform: scale(1.004) translateY(-0.25em);
+    box-shadow: 0.8em 1em black; /* stronger shadow */
+
+}
+
+.sectionDivGreenHalf p {
+    color: black;
+
+    /*highlight effect*/
+    /*    background-color: #ffeecc;
+    display: inline; */
+    /*top right bot left*/
+
+    padding: 0em 0.2em 0em 0.2em;
+    border-radius: 0.3em;
+
+}
+
+
+.sectionDivPinkHalf {
+    background-color: #FFB2EF;
+    width: 45%;
+    /*top right bot left*/
+    padding: 1em 0em 1em 2em;
+
+    /*    border: double 7px white;*/
+    border-radius: 0.5em;
+
+    margin: 1em 0; /* only vertical margin */
+
+    /* box shadow */
+    /*   box-shadow: none|h-offset v-offset blur spread color |inset|initial|inherit;*/
+    /*spread to make it larger*/
+    box-shadow: 0.6em 0.8em black;
+    transition: transform 0.2s, box-shadow 0.2s; /* smooth animation */
+}
+
+.sectionDivPinkHalf:hover {
+
+    /*scale and move up*/
+    transform: scale(1.004) translateY(-0.25em);
+    box-shadow: 0.8em 1em black; /* stronger shadow */
+
+}
+
+.sectionDivPinkHalf p {
+    color: black;
+
+    /*highlight effect*/
+    /*    background-color: #ffeecc;
+    display: inline; */
+    /*top right bot left*/
+
+    padding: 0em 0.2em 0em 0.2em;
+    border-radius: 0.3em;
+
 }
