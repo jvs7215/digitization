@@ -80,7 +80,7 @@ body {
     /*text color*/
     color: black;
 
-    padding-top: 5em; /* pushes everything down from top edge */
+    padding-top: 9em; /* pushes everything down from top edge */
     padding-bottom: 3em; /* extra space at the bottom */
 }
 
@@ -132,7 +132,6 @@ body {
     display: flex;
     align-items: center; /* keep icon aligned with text */
     gap: 0em; /* gap beteeen icon*/
-
 }
 
 h2 {
@@ -152,7 +151,6 @@ h2 {
 
 }
 
-testtesttests
 
 h3 {
     font-weight: bold;
@@ -161,6 +159,31 @@ h3 {
     padding: 0.8em 0 .3em 0em;
 
 }
+
+h4 {
+    background: linear-gradient(to top right, #FF7A5C, #FFB2EF, #A388EE);
+    
+    color: black;
+    display: inline-block; /* makes it behave like a button */
+    padding: 0.25em 0.5em; /* space inside the button */
+    border-radius: 0.3em; /* rounded corners, same as site divs */
+    box-shadow: 0.25em 0.3em 0px black; /* black shadow */
+    transition: transform 0.1s, box-shadow 0.1s;
+    text-decoration: none;
+    margin-top: 0.3em;
+    margin-left: 1.5em;
+
+        transition: transform 0.1s, box-shadow 0.1s;
+}
+
+h4:hover {
+    /*scale and move up*/
+    transform: scale(1.004) translateX(-0.4em);
+    box-shadow: 0.35em 0.4em 0px black; /* stronger shadow */
+    
+    background: linear-gradient(to top right, #A388EE, #FFB2EF, #FF7A5C);
+}
+
 
 img.icon {
     width: 2em;
@@ -317,6 +340,7 @@ ul {
     /*scale and move up*/
     transform: scale(1.004) translateY(-0.25em);
     box-shadow: 0.35em 0.4em 0px black; /* stronger shadow */
+        background: linear-gradient(to top right, #F4D738, #FFB2EF, #87CEEB);
 }
 
 
