@@ -80,7 +80,7 @@ body {
     /*text color*/
     color: black;
 
-    padding-top: 9em; /* pushes everything down from top edge */
+    padding-top: 6.5em; /* pushes everything down from top edge */
     padding-bottom: 3em; /* extra space at the bottom */
 }
 
@@ -103,7 +103,7 @@ body {
     position: relative;
     margin-left: 3em;
     color: black;
-    margin-bottom: 2em;
+    margin-bottom: 4em;
 }
 
 
@@ -111,6 +111,7 @@ body {
     padding-top: 0.0em;
     font-size: 2em;
     color: black;
+    padding-top: 0.0em;
 }
 
 
