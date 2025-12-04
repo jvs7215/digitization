@@ -225,6 +225,15 @@ p {
 
 }
 
+.refP {
+    /* top/right/bottom/left */
+    margin: 0em 0 0em 1em; /* spacing between paragraphs */
+    text-align: justify; /* evens out right edge */
+    text-indent: 2em; /* indent first line */
+    max-width: 42em; /* limits width */
+
+}
+
 /*full size images*/
 img {
     max-width: 100%;
