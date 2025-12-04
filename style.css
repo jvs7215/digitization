@@ -179,8 +179,8 @@ h4 {
 
 h4:hover {
     /*scale and move up*/
-    transform: scale(1.004) translateX(-0.4em);
-    box-shadow: 0.35em 0.4em 0px black; /* stronger shadow */
+    transform: translateX(-0.25em);
+
     
     background: linear-gradient(to top right, #A388EE, #FFB2EF, #FF7A5C);
 }
